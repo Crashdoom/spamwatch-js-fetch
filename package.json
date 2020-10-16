@@ -1,20 +1,23 @@
 {
-  "name": "spamwatch-js-cf",
-  "version": "0.1.0",
-  "description": "A version of the Spamwat.ch API that runs on CloudFlare JS Workers",
+  "name": "spamwatch-js-fetch",
+  "version": "0.2.0",
+  "description": "A version of the Spamwat.ch API that uses the Fetch API",
   "main": "lib/index",
   "types": "lib/index",
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "clean": "rimraf lib",
     "build": "tsc --pretty",
     "lint": "tslint --force --format verbose \"src/**/*.ts\"",
-    "prepublishOnly": "npm run build",
+    "test": "jest",
+    "prepublishOnly": "npm run build && npm run test",
     "prebuild": "npm run clean && npm run lint && echo Using TypeScript && tsc --version"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Crashdoom/spamwatch-js-cf.git"
+    "url": "git+https://github.com/Crashdoom/spamwatch-js-fetch.git"
   },
   "keywords": [
     "spamwatch",
@@ -23,15 +26,19 @@
   "author": "https://github.com/Crashdoom",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Crashdoom/spamwatch-js-cf/issues"
+    "url": "https://github.com/Crashdoom/spamwatch-js-fetch/issues"
   },
-  "homepage": "https://www.npmjs.com/package/spamwatch-js-cf",
+  "homepage": "https://github.com/Crashdoom/spamwatch-js-fetch",
   "dependencies": {
     "node-fetch": "^2.6.1"
   },
   "devDependencies": {
+    "@types/jest": "^26.0.14",
     "@types/node-fetch": "^2.5.7",
+    "jest": "^26.5.3",
+    "jest-fetch-mock": "^3.0.3",
     "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.1",
     "ts-node": "^9.0.0",
     "tslint": "^6.1.3",
     "typescript": "^4.0.3"

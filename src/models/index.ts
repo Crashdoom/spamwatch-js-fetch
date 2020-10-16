@@ -1,2 +1,3 @@
 export * from './Ban';
-export * from './Token';
+export * from './Version';
+export * from './Stats';
