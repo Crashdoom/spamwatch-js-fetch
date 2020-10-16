@@ -1,0 +1,33 @@
+{
+  "name": "spamwatch-js-cf",
+  "version": "0.1.0",
+  "description": "A version of the Spamwat.ch API that runs on CloudFlare JS Workers",
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "build": "tsc --pretty"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crashdoom/spamwatch-js-cf.git"
+  },
+  "keywords": [
+    "spamwatch",
+    "cloudflare-workers"
+  ],
+  "author": "https://github.com/Crashdoom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Crashdoom/spamwatch-js-cf/issues"
+  },
+  "homepage": "https://github.com/Crashdoom/spamwatch-js-cf#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.5.7",
+    "ts-node": "^9.0.0",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.3"
+  }
+}
