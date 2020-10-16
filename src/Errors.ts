@@ -1,3 +1,5 @@
+// tslint:disable: max-classes-per-file
+
 export class SpamWatchError extends Error {
   public message: string;
   public response: Response;
